@@ -23,7 +23,7 @@ class CreatorTest {
         Assert.assertTrue("X=1", 1==p1.getX());
         Assert.assertTrue("Y=2", 2==p1.getY());
         Assert.assertTrue("Z=3", 3==p1.getZ());
-        
+        System.out.println(p1.toString());
         Product p2 = cf.factoryMethod("con2");
         p2.setX(4);
         p2.setY(5);
@@ -31,7 +31,8 @@ class CreatorTest {
         Assert.assertTrue("X=4", 4==p2.getX());
         Assert.assertTrue("Y=5", 5==p2.getY());
         Assert.assertTrue("Z=6", 6==p2.getZ());
-        
+        System.out.println(p2.toString());
+
         try {
         Product p3 = cf.factoryMethod("con3");
         Assert.assertTrue("Shouldn't get here",false);
